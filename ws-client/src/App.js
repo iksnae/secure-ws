@@ -17,7 +17,7 @@ class App extends Component {
     super()
     console.log(`connecting to ${socketserver_url}`);
     var app = this;
-    var socket = require('socket.io-client')(socketserver_url);
+    var socket = require('socket.io-client')();
     socket.on('connect', function(){
       console.log("WS on connect");
       app.setState({ws_connection_status:"connected"});
