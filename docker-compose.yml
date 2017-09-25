@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  client:
+    build: ws-client
+    ports:
+      - "8000:8000"
+    environment:
+      - NGINX_PORT=80
+    command: /bin/bash -c "nginx -g 'daemon off;'"
+  server:
+    build: ws-server
+    ports:
+      - "8080:8080"

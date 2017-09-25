@@ -1,0 +1,17 @@
+{
+  "name": "ws-server",
+  "version": "1.0.0",
+  "description": "Websocket Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "engine.io": "^3.1.1",
+    "express": "^4.15.5",
+    "socket-io-server": "^1.0.5",
+    "ws": "^3.2.0"
+  }
+}
