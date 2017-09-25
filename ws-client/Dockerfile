@@ -11,4 +11,4 @@ COPY nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
 COPY build /data/www/
 
 # open port
-EXPOSE 8000
+EXPOSE 80
