@@ -4,9 +4,6 @@ import './App.css';
 
 const socketserver_url = `ws://localhost:8080`;
 
-
-console.log("WSS")
-
 class App extends Component {
 
   state = {
@@ -17,7 +14,7 @@ class App extends Component {
     super()
     console.log(`connecting to ${socketserver_url}`);
     var app = this;
-    var socket = require('socket.io-client')('*:8080');
+    var socket = require('socket.io-client')(socketserver_url);
     socket.on('connect', function(){
       console.log("WS on connect");
       app.setState({ws_connection_status:"connected"});
