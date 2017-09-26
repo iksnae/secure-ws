@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const socketserver_url = `ws://localhost:8080`;
+const socketserver_url = `ws://127.0.0.1:8080`;
 
 class App extends Component {
 
@@ -12,9 +12,9 @@ class App extends Component {
 
   constructor(){
     super()
-    console.log(`connecting to ${socketserver_url}`);
+    console.log(`connecting to local websocket..`);
     var app = this;
-    var socket = require('socket.io-client')(socketserver_url);
+    var socket = require('socket.io-client')();
     socket.on('connect', function(){
       console.log("WS on connect");
       app.setState({ws_connection_status:"connected"});
